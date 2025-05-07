@@ -1,5 +1,7 @@
-from django.http import HttpResponse
+# Frontend
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
-
-def index(request):
-    return HttpResponse("Hello, world.")
+@api_view(['GET'])
+def shop(request):
+    return Response({"message": "Hello, world."})
